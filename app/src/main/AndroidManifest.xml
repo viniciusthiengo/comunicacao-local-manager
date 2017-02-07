@@ -18,8 +18,8 @@
 
         <service
             android:name=".services.ServiceTest"
-            android:exported="false"
-            android:enabled="true" />
+            android:enabled="true"
+            android:exported="false" />
 
     </application>
 

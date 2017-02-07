@@ -7,10 +7,10 @@ import android.util.Log;
 import br.com.thiengo.comunicacaolocalmanager.MainActivity;
 
 
-public class LocalBrodcastMainActivity extends BroadcastReceiver {
+public class LocalBroadcastMainActivity extends BroadcastReceiver {
     private MainActivity activity;
 
-    public LocalBrodcastMainActivity( MainActivity activity ){
+    public LocalBroadcastMainActivity(MainActivity activity ){
         this.activity = activity;
     }
 

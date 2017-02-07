@@ -7,10 +7,10 @@ import android.content.Intent;
 import br.com.thiengo.comunicacaolocalmanager.domain.ClasseDominio;
 
 
-public class LocalBrodcastClasseDominio extends BroadcastReceiver {
+public class LocalBroadcastClasseDominio extends BroadcastReceiver {
     private ClasseDominio dominio;
 
-    public LocalBrodcastClasseDominio( ClasseDominio dominio ){
+    public LocalBroadcastClasseDominio(ClasseDominio dominio ){
         this.dominio = dominio;
     }
 

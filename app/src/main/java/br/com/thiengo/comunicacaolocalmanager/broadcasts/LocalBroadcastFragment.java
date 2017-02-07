@@ -7,10 +7,10 @@ import android.content.Intent;
 import br.com.thiengo.comunicacaolocalmanager.fragments.FragmentThread;
 
 
-public class LocalBrodcastFragment extends BroadcastReceiver {
+public class LocalBroadcastFragment extends BroadcastReceiver {
     private FragmentThread fragment;
 
-    public LocalBrodcastFragment(FragmentThread fragment ){
+    public LocalBroadcastFragment(FragmentThread fragment ){
         this.fragment = fragment;
     }
 

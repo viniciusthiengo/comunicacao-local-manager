@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:gravity="center"
-        android:text="Comunicação com LocalBroadcastManager"
+        android:text="@string/header_main_activity"
         android:textColor="#fff"
         android:textSize="28sp" />
 
@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="160dp"
         android:onClick="cicloMensagem"
-        android:text="Iniciar Ciclo Mensagem " />
+        android:text="@string/action_button" />
 
     <TextView
         android:id="@+id/tv_conteudo"

@@ -1,3 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Comunicação LocalManager</string>
+    <string name="header_main_activity">Comunicação com LocalBroadcastManager</string>
+    <string name="action_button">Iniciar Ciclo Mensagem</string>
 </resources>

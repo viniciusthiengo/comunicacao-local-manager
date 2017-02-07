@@ -6,7 +6,7 @@ import android.content.IntentFilter;
 import android.support.v4.content.LocalBroadcastManager;
 
 import br.com.thiengo.comunicacaolocalmanager.MainActivity;
-import br.com.thiengo.comunicacaolocalmanager.broadcasts.LocalBrodcastClasseDominio;
+import br.com.thiengo.comunicacaolocalmanager.broadcasts.LocalBroadcastClasseDominio;
 
 /**
  * Created by viniciusthiengo on 07/02/17.
@@ -17,15 +17,17 @@ public class ClasseDominio {
     public static final String MENSAGEM_KEY = "ClasseDominio_MENSAGEM_KEY";
 
     private Context context;
-    private LocalBrodcastClasseDominio broadcast;
+    private LocalBroadcastClasseDominio broadcast;
 
 
     public ClasseDominio( Context context ){
         this.context = context;
 
-        broadcast = new LocalBrodcastClasseDominio(this);
+        broadcast = new LocalBroadcastClasseDominio(this);
         IntentFilter intentFilter = new IntentFilter( FILTRO_KEY );
-        LocalBroadcastManager.getInstance(context).registerReceiver( broadcast, intentFilter );
+        LocalBroadcastManager
+                .getInstance(context)
+                .registerReceiver( broadcast, intentFilter );
     }
 
     public void logMensagem( String mensagem ){
@@ -33,10 +35,14 @@ public class ClasseDominio {
 
         Intent intent = new Intent(MainActivity.FILTRO_KEY);
         intent.putExtra(MainActivity.MENSAGEM_KEY, mensagem);
-        LocalBroadcastManager.getInstance(context).sendBroadcast( intent );
+        LocalBroadcastManager
+                .getInstance(context)
+                .sendBroadcast( intent );
     }
 
     public void destroy(){
-        LocalBroadcastManager.getInstance(context).unregisterReceiver( broadcast );
+        LocalBroadcastManager
+                .getInstance(context)
+                .unregisterReceiver( broadcast );
     }
 }

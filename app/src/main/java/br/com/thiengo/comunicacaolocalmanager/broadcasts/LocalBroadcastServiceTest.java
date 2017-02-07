@@ -6,10 +6,10 @@ import android.content.Intent;
 import br.com.thiengo.comunicacaolocalmanager.services.ServiceTest;
 
 
-public class LocalBrodcastServiceTest extends BroadcastReceiver {
+public class LocalBroadcastServiceTest extends BroadcastReceiver {
     private ServiceTest service;
 
-    public LocalBrodcastServiceTest( ServiceTest service ){
+    public LocalBroadcastServiceTest(ServiceTest service ){
         this.service = service;
     }
 

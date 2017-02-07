@@ -9,7 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
 import android.view.View;
 import android.widget.TextView;
-import br.com.thiengo.comunicacaolocalmanager.broadcasts.LocalBrodcastMainActivity;
+import br.com.thiengo.comunicacaolocalmanager.broadcasts.LocalBroadcastMainActivity;
 import br.com.thiengo.comunicacaolocalmanager.domain.ClasseDominio;
 import br.com.thiengo.comunicacaolocalmanager.fragments.FragmentThread;
 import br.com.thiengo.comunicacaolocalmanager.services.ServiceTest;
@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String FILTRO_KEY = "MainActivity_KEY";
     public static final String MENSAGEM_KEY = "MainActivity_MENSAGEM_KEY";
 
-    private LocalBrodcastMainActivity broadcast;
+    private LocalBroadcastMainActivity broadcast;
     private ClasseDominio dominio;
 
     @Override
@@ -43,9 +43,11 @@ public class MainActivity extends AppCompatActivity {
         dominio = new ClasseDominio(this);
 
         /* INTENT FILTER */
-        broadcast = new LocalBrodcastMainActivity(this);
+        broadcast = new LocalBroadcastMainActivity(this);
         IntentFilter intentFilter = new IntentFilter( FILTRO_KEY );
-        LocalBroadcastManager.getInstance(this).registerReceiver( broadcast, intentFilter );
+        LocalBroadcastManager
+                .getInstance(this)
+                .registerReceiver( broadcast, intentFilter );
     }
 
     @Override
@@ -54,7 +56,9 @@ public class MainActivity extends AppCompatActivity {
 
         dominio.destroy();
 
-        LocalBroadcastManager.getInstance(this).unregisterReceiver( broadcast );
+        LocalBroadcastManager
+                .getInstance(this)
+                .unregisterReceiver( broadcast );
 
         Intent intent = new Intent(this, ServiceTest.class);
         stopService( intent );
@@ -63,7 +67,9 @@ public class MainActivity extends AppCompatActivity {
     public void cicloMensagem(View view){
         Intent intent = new Intent(ServiceTest.FILTRO_KEY);
         intent.putExtra( ServiceTest.MENSAGEM_KEY, "ServiceTest: mensagem ok.<br>" );
-        LocalBroadcastManager.getInstance(this).sendBroadcastSync(intent);
+        LocalBroadcastManager
+                .getInstance(this)
+                .sendBroadcast(intent);
     }
 
     public void logMensagem(String mensagem ){
