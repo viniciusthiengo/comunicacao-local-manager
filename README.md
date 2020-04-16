@@ -10,7 +10,7 @@ O conteúdo do artigo também está disponível em [vídeo](https://www.thiengo.
 
 ### Primeira parte
 
-Caso você queira ter acesso à primeira parte do artigo, então [entre por aqui](https://www.thiengo.com.br/flexboxlayout-para-um-design-previsivel-no-android#title-01). Está primeira parte apresenta alguns detalhes extras sobre a API LocalBroadcastManager.
+Caso você queira ter acesso à primeira parte do artigo, então [entre por aqui](https://www.thiengo.com.br/como-utilizar-o-localbroadcastmanager-para-comunicacao-no-android#title-01). Está primeira parte apresenta alguns detalhes extras sobre a API LocalBroadcastManager.
 
 ### AndroidX
 
